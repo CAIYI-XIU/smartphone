@@ -52,9 +52,9 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Apple Xs</td>
-                        <td><img src="./照片/iphone-xs-gold-select-2018.png" width=200></td>
-                        <td>
+                        <td data-th="手機品牌及名稱">Apple Xs</td>
+                        <td data-th="照片"><img src="./照片/iphone-xs-gold-select-2018.png" width=200></td>
+                        <td data-th="規格">
                             <ul>
                                 <li>5.8 吋 2436 x 1125 OLED</li>
                                 <li>iOS 12 作業系統</li>
@@ -65,7 +65,7 @@
                                 <li>防水防塵：IP68</li>
                             </ul>
                         </td>
-                        <td>
+                        <td data-th="優缺點">
                             <ul>
                                 <li>優點</li>
                                 <ol>
@@ -84,12 +84,12 @@
                                 </ol>
                             </ul>
                         </td>
-                        <td>NT$35,900</td>
+                        <td data-th="價格">NT$35,900</td>
                     </tr>
                     <tr>
-                        <td>Samsung S10</td>
-                        <td><img src="./照片/20190122_s10price_01_1024.jpg" width=200></td>
-                        <td>
+                        <td data-th="手機品牌及名稱">Samsung S10</td>
+                        <td data-th="照片"><img src="./照片/20190122_s10price_01_1024.jpg" width=200></td>
+                        <td data-th="規格">
                             <ul>
                                 <li>6.1 吋 3040x1440 Dynamic AMOLED</li>
                                 <li>Android 9.0 作業系統</li>
@@ -101,7 +101,7 @@
                                 <li>防水防塵：IP68</li>
                             </ul>
                         </td>
-                        <td>
+                        <td data-th="優缺點">
                             <ul>
                                 <li>優點</li>
                                 <ol>
@@ -120,12 +120,12 @@
                                 </ol>
                             </ul>
                         </td>
-                        <td>NT$29,900</td>
+                        <td data-th="價格">NT$29,900</td>
                     </tr>
                     <tr>
-                        <td>Oppo R17</td>
-                        <td><img src="./照片/oppo-r17-pro-blue-combo.jpg" width=200></td>
-                        <td>
+                        <td data-th="手機品牌及名稱">Oppo R17</td>
+                        <td data-th="照片"><img src="./照片/oppo-r17-pro-blue-combo.jpg" width=200></td>
+                        <td data-th="規格">
                             <ul>
                                 <li>6.4 吋 2340 x 1080 AMOLED (水滴屏設計)</li>
                                 <li>Android 8.1 作業系統</li>
@@ -137,7 +137,7 @@
                                 <li>無防水防塵</li>
                             </ul>
                         </td>
-                        <td>
+                        <td data-th="優缺點">
                             <ul>
                                 <li>優點</li>
                                 <ol>
@@ -153,12 +153,12 @@
                                 </ol>
                             </ul>
                         </td>
-                        <td>NT$15,990</td>
+                        <td data-th="價格">NT$15,990</td>
                     </tr>
                     <tr>
-                        <td>Sony Xperia 1</td>
-                        <td><img src="./照片/01_Xperia-1_Primary-product-image_Black-e776e241f1d48b55ad6e630f862253b6.png" width=200></td>
-                        <td>
+                        <td data-th="手機品牌及名稱">Sony Xperia 1</td>
+                        <td data-th="照片"><img src="./照片/01_Xperia-1_Primary-product-image_Black-e776e241f1d48b55ad6e630f862253b6.png" width=200></td>
+                        <td data-th="規格">
                             <ul>
                                 <li>6.5 吋 3840x1644 OLED</li>
                                 <li>Android 9.0 作業系統</li>
@@ -170,13 +170,13 @@
                                 <li>防水防塵：IP68</li>
                             </ul>
                         </td>
-                        <td>尚未上市，待日後更新</td>
-                        <td>尚未發售</td>
+                        <td data-th="優缺點">尚未上市，待日後更新</td>
+                        <td data-th="價格">尚未發售</td>
                     </tr>
                     <tr>
-                        <td>Asus Zenfone 5z</td>
-                        <td><img src="./照片/P_setting_fff_1_90_end_600.jpg" width=200></td>
-                        <td>
+                        <td data-th="手機品牌及名稱">Asus Zenfone 5z</td>
+                        <td data-th="照片"><img src="./照片/P_setting_fff_1_90_end_600.jpg" width=200></td>
+                        <td data-th="規格">
                             <ul>
                                 <li>6.2 吋 2246 x 1080 IPS TFT</li>
                                 <li>Android 8.0 作業系統</li>
@@ -188,7 +188,7 @@
                                 <li>無防水防塵</li>
                             </ul>
                         </td>
-                        <td>
+                        <td data-th="優缺點">
                             <ul>
                                 <li>優點</li>
                                 <ol>
@@ -205,7 +205,7 @@
                                 </ol>
                             </ul>
                         </td>
-                        <td>NT$16,990</td>
+                        <td data-th="價格">NT$16,990</td>
                     </tr>
                 </tbody>
             </table>
@@ -222,6 +222,34 @@
         
         img:hover {
             transform: scale(2);
+        }
+        
+        .rwd-table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        .rwd-table th,
+        td {
+            border: 1px solid black;
+        }
+        
+        @media screen and (max-width:451px) {
+            .rwd-table tr {
+                border: 1px solid black;
+            }
+            .rwd-table th {
+                display: none;
+            }
+            .rwd-table td {
+                display: block;
+                border: none;
+            }
+            .rwd-table td:before {
+                content: attr(data-th) " ";
+                float: left;
+                font-weight: bold;
+            }
         }
     </style>
 
