@@ -234,96 +234,117 @@
                 </tbody>
             </table>
         </div>
+        <!-- Contact -->
+        <div class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top" id="contact">
+            <h3 class="w3-center">Contact</h3>
+            <hr>
+            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt
+                sed tellus.</p>
 
-    </div>
+            <form action="/action_page.php" target="_blank">
+                <div class="w3-section">
+                    <label>Name</label>
+                    <input class="w3-input w3-border" type="text" required name="Name">
+                </div>
+                <div class="w3-section">
+                    <label>Email</label>
+                    <input class="w3-input w3-border" type="text" required name="Email">
+                </div>
+                <div class="w3-section">
+                    <label>Message</label>
+                    <input class="w3-input w3-border" required name="Message">
+                </div>
+                <button type="submit" class="w3-button w3-block w3-dark-grey">Send</button>
+            </form><br>
+        </div>
 
 
-    <style>
-        h1 {
-            text-align: center;
-            font-family: '標楷體'
-        }
-        
-        img:hover {
-            transform: scale(2);
-        }
-        
-        .rwd-table {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        
-        .rwd-table th,
-        td {
-            border: 1px solid black;
-        }
-        
-        @media screen and (max-width:451px) {
-            .rwd-table tr {
+        <style>
+            h1 {
+                text-align: center;
+                font-family: '標楷體'
+            }
+            
+            img:hover {
+                transform: scale(2);
+            }
+            
+            .rwd-table {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            
+            .rwd-table th,
+            td {
                 border: 1px solid black;
             }
-            .rwd-table th {
-                display: none;
+            
+            @media screen and (max-width:451px) {
+                .rwd-table tr {
+                    border: 1px solid black;
+                }
+                .rwd-table th {
+                    display: none;
+                }
+                .rwd-table td {
+                    display: block;
+                    border: none;
+                }
+                .rwd-table td:before {
+                    content: attr(data-th) " ";
+                    float: left;
+                    font-weight: bold;
+                }
             }
-            .rwd-table td {
-                display: block;
-                border: none;
+        </style>
+
+        <script>
+            var openInbox = document.getElementById("myBtn");
+            openInbox.click();
+
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
             }
-            .rwd-table td:before {
-                content: attr(data-th) " ";
-                float: left;
-                font-weight: bold;
+
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
             }
-        }
-    </style>
 
-    <script>
-        var openInbox = document.getElementById("myBtn");
-        openInbox.click();
-
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-            document.getElementById("myOverlay").style.display = "block";
-        }
-
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-            document.getElementById("myOverlay").style.display = "none";
-        }
-
-        function myFunc(id) {
-            var x = document.getElementById(id);
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-                x.previousElementSibling.className += " w3-red";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-                x.previousElementSibling.className =
-                    x.previousElementSibling.className.replace(" w3-red", "");
+            function myFunc(id) {
+                var x = document.getElementById(id);
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                    x.previousElementSibling.className += " w3-red";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                    x.previousElementSibling.className =
+                        x.previousElementSibling.className.replace(" w3-red", "");
+                }
             }
-        }
 
-        openMail("Borge")
+            openMail("Borge")
 
-        function openMail(personName) {
-            var i;
-            var x = document.getElementsByClassName("person");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
+            function openMail(personName) {
+                var i;
+                var x = document.getElementsByClassName("person");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x = document.getElementsByClassName("test");
+                for (i = 0; i < x.length; i++) {
+                    x[i].className = x[i].className.replace(" w3-light-grey", "");
+                }
+                document.getElementById(personName).style.display = "block";
+                event.currentTarget.className += " w3-light-grey";
             }
-            x = document.getElementsByClassName("test");
-            for (i = 0; i < x.length; i++) {
-                x[i].className = x[i].className.replace(" w3-light-grey", "");
-            }
-            document.getElementById(personName).style.display = "block";
-            event.currentTarget.className += " w3-light-grey";
-        }
-    </script>
+        </script>
 
-    <script>
-        var openTab = document.getElementById("firstTab");
-        openTab.click();
-    </script>
+        <script>
+            var openTab = document.getElementById("firstTab");
+            openTab.click();
+        </script>
 
 </body>
 
